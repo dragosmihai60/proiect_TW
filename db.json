@@ -1,0 +1,19 @@
+{
+  "dogs": [
+    {
+      "name": "Pan",
+      "img": "images/Produs1/Protect-vara.jpg",
+      "id": 4
+    },
+    {
+      "name": "Bocanc COMBAT",
+      "img": "images/Produs2/Protect-Combat.jpg",
+      "id": 8
+    },
+    {
+      "name": "Bocanci Inalti",
+      "img": "file:///C:/Users/Dragos/Desktop/proiect%20tw/images/Produs3/Jandarm1.jpg",
+      "id": 9
+    }
+  ]
+}

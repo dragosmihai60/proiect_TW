@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toate Produsele</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:
+    wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+            integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+            crossorigin="anonymous"
+        />
+<body>
+
+<div class="header">
+ <div class="container">
+    <div class="navbar">
+        <div class="logo">
+            <img src="images/conefex.png " width="125px">
+        </div>
+        <nav>
+            <ul id="MenuItems">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="produse.html">Produse</a></li>
+                <li><a href="">Despre Noi</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </nav>
+        <!-------<img src="images/cart.png" width width="30px" height="30px">--->
+        <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+        <!--Shopping cart-->
+        <div class="shopping-cart">
+            <div class="sum-prices">
+                <!--Shopping cart logo-->
+                <a href="cart.html">
+                    <i class="fas fa-shopping-cart shoppingCartButton"></i>
+                </a>
+                <!--The total prices of products in the shopping cart -->
+                <h6 id="sum-prices"></h6>
+            </div>
+        </div>
+    </div>
+ </div>
+</div>
+
+
+<!------- products ------->
+    <div class="small-container">
+        <div class="row row-2">
+            <h2>Toate Produsele</h2>
+            <select>
+                <option>Sortare Implicita</option>
+                <option>Sortare dupa pret</option>
+                <option>Sortare dupa popularitate</option>
+                <option>Sortare dupa rating</option>
+                <option>Sortare dupa vanzari</option>
+            </select>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <img src="images/Produs1/Protect-vara.jpg">
+                <h4 class="productName"><a href="detalii produs.html">Bocanci Protect Vara</a></h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+                <div class="product-over">
+                    <button
+                        onclick="addphoto()"
+                        class="btn btn-small addToCart"
+                        data-product-id="1">
+                        <i class="fas fa-cart-plus"></i>Add
+                        to cart
+                    </button>
+                </div>
+                <p class="price">
+                    <span class="priceValue">180 RON</span>
+                </p>
+            </div>
+
+            <script src="script.js"></script>
+
+            <div class="col-4">
+                <img src="images/Produs2/Protect-Combat.jpg">
+                <h4>Bocanci COMBAT</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <div class="product-over">
+                    <button
+                        class="btn btn-small addToCart"
+                        data-product-id="2">
+                        <i class="fas fa-cart-plus"></i>Add
+                        to cart
+                    </button>
+                </div>
+                <p>186 RON</p>
+            </div>
+            <div class="col-4">
+                <img src="images/Produs3/Jandarm1.jpg" alt="">
+                <h4>Bocanci Inalti</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                </div>
+                <div class="product-over">
+                    <button
+                        class="btn btn-small addToCart"
+                        data-product-id="3">
+                        <i class="fas fa-cart-plus"></i>Add
+                        to cart
+                    </button>
+                </div>
+                <p>195 RON</p>
+            </div>
+            <div class="col-4">
+                <img src="images/Produs4/Bocanci-incalti.jpg" alt="">
+                <h4>Bocanci Protect Vara</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <div class="product-over">
+                    <button
+                        class="btn btn-small addToCart"
+                        data-product-id="4">
+                        <i class="fas fa-cart-plus"></i>Add
+                        to cart
+                    </button>
+                </div>
+                <p>185 RON</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <img src="images/Produs5/Pantofi-dama-Rita-Vara.jpg">
+                <h4>Pantofi Dama Rita</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>140 RON</p>
+            </div>
+            <div class="col-4">
+                <img src="images/Produs6/Cizma-dama-cadre.jpg">
+                <h4>Cizme Dama Cadre</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>180 RON</p>
+            </div>
+            <div class="col-4">
+                <img src="images/Produs7/Ghete-Dara.jpg">
+                <h4>Ghete Dama Dara</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                </div>
+                <p>165 RON</p>
+            </div>
+            <div class="col-4">
+                <img src="images/Produs8/Pantofi-Dara.jpg">
+                <h4>Pantofi Dama Dara</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>145 RON</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <img src="images/Produs9/Bocanci-dama.jpg">
+                <h4>Bocanci Dama</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>185 RON</p>
+            </div>
+            <div class="col-4">
+                <img src="images/Produs10/cizma-pompier-ISU.jpg">
+                <h4>Cizme Isu</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>280 RON</p>
+            </div>
+            <div class="col-4">
+                <img src="images/Produs11/Bocanci-XTREME.jpg">
+                <h4>Bocanci Protect Extreme</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                </div>
+                <p>595 RON</p>
+            </div>
+            <div class="col-4">
+                <img src="images/Produs12/Protect-Iarna.jpg">
+                <h4>Bocanci Protect Iarna</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>185 RON</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <img src="images/Produs13/Pantofi-cadre-iarna-N.jpg">
+                <h4>Pantofi Cadre Negri</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>135 RON</p>
+            </div>
+            <div class="col-4">
+                <img src="images/Produs14/Pantofi-Cadre-iarna.jpg">
+                <h4>Pantofi Cadre Maro</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>135 RON</p>
+            </div>
+            <div class="col-4">
+                <img src="images/Produs15/Pantofi-dans.jpg">
+                <h4>Pantofi Dans</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                </div>
+                <p>140 RON</p>
+            </div>
+            <div class="col-4">
+                <img src="images/Produs16/Gheata-dans-Dama.jpg">
+                <h4>Ghete Dans</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>180 RON</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <img src="images/Produs17/Ghete-cadre.jpg">
+                <h4>Ghete Cadre</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>165 RON</p>
+            </div>
+            <div class="col-4">
+                <img src="images/Produs18/Gheata-ISU-cu-siret-B-1.jpg">
+                <h4>Ghete ISU</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>165 RON</p>
+            </div>
+            <div class="col-4">
+                <img src="images/Produs19/Pantofi-IGPR-2-1-500x500.jpg">
+                <h4>Pantofi IGPR</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                </div>
+                <p>145 RON</p>
+            </div>
+            <div class="col-4">
+                <img src="images/Produs20/centura-gaterist.jpg">
+                <h4>Centura Gaterist</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>76 RON</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <img src="images/Produs21/Centura.jpg">
+                <h4>Centura Lombara</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>68 RON</p>
+            </div>
+            <div class="col-4">
+                <img src="images/Produs22/Jambiere.jpg">
+                <h4>Jambiere</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>45 RON</p>
+            </div>
+            <div class="col-4">
+                <img src="images/Produs23/Genunchiere.jpg">
+                <h4>Genunchiere</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                </div>
+                <p>45 RON</p>
+            </div>
+            <div class="col-4">
+                <img src="images/Produs24/Centura-piele.jpg">
+                <h4>Centura Piele</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>50 RON</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <img src="images/Produs25/Curea-Piele.jpg">
+                <h4>Curea Piele</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>40 RON</p>
+            </div>
+            <div class="col-4">
+                <img src="images/Produs26/port-catuse.jpg">
+                <h4>Port Catuse</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>35 RON</p>
+            </div>
+            <div class="col-4">
+                <img src="images/Produs27/toc-pistol.jpg">
+                <h4>Toc Pistol</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                </div>
+                <p>50 RON</p>
+            </div>
+            <div class="col-4">
+                <img src="images/Produs28/Port-spray.jpg">
+                <h4>Port Spray</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>25 RON</p>
+            </div>
+        </div>
+        <div class="page-btn">
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+            <span>4</span>
+        </div>
+    </div>
+    </div>
+    
+<!--------footer------->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Scopul nostru este sa fim mai buni pe zi ce trece.</h3>
+                </div>
+                <div class="footer-col-2">
+                    <h3>Date importante</h3>
+                    <ul>
+                        <li>Termeni si Conditii</li>
+                        <li>Politica de confidentialitate</li>
+                    </ul>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Urmareste-ne</h3>
+                        <ul>
+                            <li>Facebook</li>
+                            <li>Instagram</li>
+                            <li>YouTube</li>
+                        </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-----js for toggle menu----->
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle(){
+            if( MenuItems.style.maxHeight == "0px")
+                {
+                    MenuItems.style.maxHeight = "200px";
+                }
+            else
+                {
+                    MenuItems.style.maxHeight = "0px";
+                }
+        
+        
+        }
+    </script>
+
+    <script src="shoppingCart.js"></script>
+</body>
+</html>
